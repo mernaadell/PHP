@@ -1,0 +1,15 @@
+first i need program to get php , mysql and apache
+LAPM
+MAMP
+WAMP
+XAMPP
+komodo editor
+integrated development environment
+
+The PHP parsing engine needs a way to differentiate PHP code from other elements in the page.
+The mechanism for doing so is known as 'escaping to PHP'. There are four ways to do this 
+<?php .....?>
+<?...?>
+<%...%>
+<script language = "PHP">...</script>
+PHP is whitespace insensitive dosnt care about how many spaces exist
