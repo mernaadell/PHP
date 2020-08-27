@@ -13,3 +13,4 @@ The mechanism for doing so is known as 'escaping to PHP'. There are four ways to
 <%...%>
 <script language = "PHP">...</script>
 PHP is whitespace insensitive dosnt care about how many spaces exist
+
