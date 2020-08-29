@@ -129,3 +129,48 @@ A variable name can consist of numbers, letters, underscores but you cannot use 
 
 There is no size limit for variables.
 -->
+
+<!-- 
+What is Operator? Simple answer can be given using expression 4 + 5 is equal to 9. Here 4 and 5 are called operands and + is called operator. PHP language supports following type of operators.
+
+Arithmetic Operators
+Comparison Operators
+Logical (or Relational) Operators
+Assignment Operators
+Conditional (or ternary) Operators
+Lets have a look on all operators one by one. 
+
+
+    Arithmetic Operators
++	Adds two operands	A + B will give 30
+-	Subtracts second operand from the first	A - B will give -10
+*	Multiply both operands	A * B will give 200
+/	Divide numerator by de-numerator	B / A will give 2
+%	Modulus Operator and remainder of after an integer division	B % A will give 0
+++	Increment operator, increases integer value by one	A++ will give 11
+--	Decrement operator, decreases integer value by one	A-- will give 9
+
+
+
+    Comparison Operators
+==	Checks if the value of two operands are equal or not, if yes then condition becomes true.	(A == B) is not true.
+!=	Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.	(A != B) is true.
+>	Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.	(A > B) is not true.
+<	Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.	(A < B) is true.
+>=	Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.	(A >= B) is not true.
+<=	Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.	(A <= B) is true.
+
+
+
+    Logical Operators
+and	Called Logical AND operator. If both the operands are true then condition becomes true.	(A and B) is true.
+or	Called Logical OR Operator. If any of the two operands are non zero then condition becomes true.	(A or B) is true.
+&&	Called Logical AND operator. If both the operands are non zero then condition becomes true.	(A && B) is true.
+||	Called Logical OR Operator. If any of the two operands are non zero then condition becomes true.	(A || B) is true.
+!	Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true then Logical NOT operator will make false.	!(A && B) is false
+
+
+    Conditional Operator
+? :	Conditional Expression	If Condition is true ? Then value X : Otherwise value Y
+
+-->
