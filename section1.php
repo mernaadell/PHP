@@ -249,4 +249,23 @@ foreach
          }
 
 
+         Arrays
+Numeric array − An array with a numeric index. Values are stored and accessed in linear fashion.
+
+Associative array − An array with strings as index. This stores element values in association with key values rather than in a strict linear index order.
+
+Multidimensional array − An array containing one or more arrays and values are accessed using multiple indices
+
+ $numbers = array( 1, 2, 3, 4, 5);
+         
+         foreach( $numbers as $value ) {
+            echo "Value is $value <br />";
+         }
+
+$salaries = array("mohammad" => 2000, "qadir" => 1000, "zara" => 500);
+         
+         echo "Salary of mohammad is ". $salaries['mohammad'] . "<br />";
+         echo "Salary of qadir is ".  $salaries['qadir']. "<br />";
+         echo "Salary of zara is ".  $salaries['zara']. "<br />"
+
 -->
