@@ -173,4 +173,80 @@ or	Called Logical OR Operator. If any of the two operands are non zero then cond
     Conditional Operator
 ? :	Conditional Expression	If Condition is true ? Then value X : Otherwise value Y
 
+
+
+
+    The If...Else Statement
+If you want to execute some code if a condition is true and another code if a condition is false, use the if....else statement.
+
+Syntax
+if (condition)
+   code to be executed if condition is true;
+else
+   code to be executed if condition is false;
+
+
+   The Switch Statement
+If you want to select one of many blocks of code to be executed, use the Switch statement.
+
+The switch statement is used to avoid long blocks of if..elseif..else code.
+
+Syntax
+switch (expression){
+   case label1:
+      code to be executed if expression = label1;
+      break;  
+   
+   case label2:
+      code to be executed if expression = label2;
+      break;
+      default:
+   
+   code to be executed
+   if expression is different 
+   from both label1 and label2;
+}
+
+
+    looping
+forloop
+ $a = 0;
+         $b = 0;
+         
+         for( $i = 0; $i<5; $i++ ) {
+            $a += 10;
+            $b += 5;
+         }
+         
+         echo ("At the end of the loop a = $a and b = $b" );
+
+while loop
+ $i = 0;
+         $num = 50;
+         
+         while( $i < 10) {
+            $num--;
+            $i++;
+         }
+
+do..while
+ $i = 0;
+         $num = 0;
+         
+         do {
+            $i++;
+         }
+         
+         while( $i < 10 );
+         echo ("Loop stopped at i = $i" );
+      ?>
+
+foreach
+ $array = array( 1, 2, 3, 4, 5);
+         
+         foreach( $array as $value ) {
+            echo "Value is $value <br />";
+         }
+
+
 -->
