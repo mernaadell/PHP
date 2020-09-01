@@ -48,5 +48,57 @@ echo "\n";
 $i= is_writable("merna.txt");
 echo "hh".$i;
 chmod("merna.txt",0777);
-file_put_contents("mena.txt","hi",FILE_APPEND)
+file_put_contents("mena.txt","hi",FILE_APPEND);
+//copy &rename
+
+copy("mena.txt","yehia.txt");//y3ml file gded fe nfs l 7agat files oly
+rename("mena.txt","mera.txt");//file and dirs (tany parameter da l path bta3 l file w asmo)
+
+//path info
+//ttl3 array fe l info
+print_r (pathinfo(__FILE__));//print r de bttb3 array mynf3sh b echo //lw 3wza atba3 7aga mo3yna a7otha fe l paramter l tai
+
+//unlink
+//delete files
+unlink("mera.txt");
+
+//scandir
+//scan kol l files elii gwa l dir ashofhom 3obara 3an eh
+$files=scandir("mero");
+
+print_r($files);
+
+//fopen()
+
+// "r" (Read only. Starts at the beginning of the file)
+// "r+" (Read/Write. Starts at the beginning of the file)
+// "w" (Write only. Opens and clears the contents of file; or creates a new file if it doesn't exist)
+// "w+" (Read/Write. Opens and clears the contents of file; or creates a new file if it doesn't exist)
+// "a" (Write only. Opens and writes to the end of the file or creates a new file if it doesn't exist)
+// "a+" (Read/Write. Preserves file content by writing to the end of the file)
+// "x" (Write only. Creates a new file. Returns FALSE and an error if file already exists)
+// "x+" (Read/Write. Creates a new file. Returns FALSE and an error if file already exists)
+
+$handle=fopen("merna.txt","r+");
+
+//fread()
+
+$content=fread($handle,filesize("merna.txt"));
+
+echo $content;
+
+//fwrite()
+
+fwrite($handle,"hello");
+
+//fseek()//y7rkly l pointer 2abl ma aktab
+
+// SEEK_SET - Set position equal to offset bytes.
+// SEEK_CUR - Set position to current location plus offset.
+// SEEK_END - Set position to end-of-file plus offset.
+
+fseek($handle,2,SEEK_SET);
+fwrite($handle,"he");
+
+fclose($handle);
 ?>
