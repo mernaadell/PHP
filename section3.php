@@ -1,11 +1,4 @@
 <?php
-
-?>
-<form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST">
-<input type="text" name="username">
-<input type="submit">
-</form>
-<?php
 //global scope
 
 $name="merna adel ragab";
@@ -27,4 +20,39 @@ if($_SERVER["REQUEST_METHOD"]=="POST") //check
    echo $_REQUEST["username"]; //l attnen wa7ed
     echo "hello iam post";
 }
+//cookies ad example
+$_background="#000";
+if (count($_COOKIE)>0){ //is cookiew enable or not in my browser
+
+    echo "cookie enable";
+
+}
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+   
+    $_body=$_POST["color"];
+
+    setcookie("background",$_body,time()+3600,"/");
+}
+
+if(isset($_COOKIE["background"])){
+    
+    $_body=$_COOKIE["background"];
+    echo $_body."hi";
+}
+else{
+
+    $_body=$_background;
+    echo $_body."hi";
+}
+
+
+?>
+<form action="<?php echo $_SERVER["PHP_SELF"] ?> "style="background:<?php echo $_body ?>" method="POST">
+<input type="text" name="username">
+<input type=color name="color">
+<input type="submit">
+</form>
+<?php
+
+
 ?>
