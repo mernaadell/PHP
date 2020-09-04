@@ -44,8 +44,34 @@ else{
     $_body=$_background;
     echo $_body."hi";
 }
+//$_SESSION
+session_start();
+$_SESSION["name"]="merna;";
+$_SESSION["last"]="adel";
+print_r ($_SESSION);
 
+//filters
+//filter_var(variable,filter type,option)
+//is number or not
+$input=$_POST["username"];
+if(filter_var($input,FILTER_VALIDATE_INT)==true){
+    echo "yes";
+}else{
+    echo "no";
+}
 
+$inputafter=filter_var($input,FILTER_SANITIZE_NUMBER_INT);
+echo $inputafter;
+
+//date
+
+echo date("Y-m-d");
+
+date_default_timezone_set("Asia/Riyadh");
+
+$time= time();
+
+echo date("Y-m-d h:i:s",$time)
 ?>
 <form action="<?php echo $_SERVER["PHP_SELF"] ?> "style="background:<?php echo $_body ?>" method="POST">
 <input type="text" name="username">
