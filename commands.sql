@@ -35,6 +35,27 @@ alter table employee convert to CHARACTER SET UTF8;
 --constrains
 alter table employee modify password varchar(255) not null;
 alter table employee add merna varchar(255) not null;
+alter table employee add unique(id);--5leto unique
+alter table employee drop index id; --shelt ano unique
+alter table employee add primary key(id);
+alter table employee drop primary key;
+show indexes from employee;
+
+--forign key
+create table class(
+    id int not null,
+    primary key(id),
+    name varchar(255) not null unique,
+    number int(11) unique
+);
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES class(id)
+);
+
 
 
 
