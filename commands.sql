@@ -161,7 +161,102 @@ select text,ltrim(text) as trimed from try;
 select text as maintext,lpad(text,10,".txt") as withpadded from try;
 
 --math
+--ceil
+--floor
+--round(num,decimal)
+--truncate(number,decimal) zy l round bs mesh bt2rab a5er rkam 3ashry
+
 select number as mainnumber ,ceil(number) as newnumber from try;
 select number as mainnumber ,floor(number) as newnumber from try;
 select number as mainnumber ,round(number) as newnumber from try;
 select number as mainnumber ,round(number,2) as newnumber from try;
+
+select number as mainnumber round(number ,2),truncate(number,2) from try
+select number pow(number,2) from try;
+select number mod(number,2)from try;
+
+--date&time functions
+
+select curtime();--hh;mm;ss
+select curdate();--yy-mm-dd
+select now(); --l attnen swa
+select current_timestamp();
+
+--dayname(date) thursday
+--dayofmonth(date) 20
+--dayofweek(date)23
+--dayofyear(date)123
+
+--month(date)
+--monthname(date)
+--hour(date)
+--minute(date)
+
+--datediff(date1,date2)l far2 benhom
+
+--last_day(date)a5er yom fe l shahr
+--date_add(date,interval exp time unit)
+--date_sub()
+update try set date=date_add(date,interval 10 day) --yzwd 10 ayam 3la date l asly
+update try set date=date_add(date,interval 1 month);
+
+
+--comparison functions
+-- between exp1(min) and exp2(max)
+select * from try where number between 2 and 6;
+select * from try where number not between 2 and 6;
+select * from try where number in (4,5,8,"m");
+select * from try where number not in (4,5,8);
+--in
+-- not in
+
+--like lw mesh 3arf l asm kamel
+--%empty or collection of char
+-- _ one char
+select * from try where name like "%erna";--merna
+select * from try where name like "%erna%";
+
+--comparison 
+-- ==,>,<,>=
+
+--logical
+--or not xor and && ! || xor[a and not b] lazam wa7ed mt7a2a2 w wa7ed la
+-- 7a2a2 l awalany w l tay la
+
+--if (condition,true,false)
+
+select id,name,if(number<24,"hard luck","congrats")as result from try 
+update try set number =if (number<1,number+10,number)
+
+--case 
+--    when exp=value then result
+--    when exp=value then result
+--    else result
+--end
+select id,name,
+case
+    when number=10 then "not bad"
+    when number=20 then "good"
+    else then "hi"
+end as result from try
+
+--arithmatic
+
+select (2*2)+100
+select name,days as daysofwork,days*daysofwork as res from try
+
+--information function
+select user();
+select session user();
+select version();
+select charset(user());
+
+--imp
+--order by
+select name from try order by id ;
+--group ygma3 elii zy bed ygbhom mra wa7da
+select name,sum(points) from try group by name;
+select name,count(status) from try group by name;
+--having filter
+select name,count(status) howmuch from try group by name having howmuch >1;
+
