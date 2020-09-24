@@ -109,9 +109,66 @@ echo date('h:i:s') . "\n";
 
 var_dump(test(30, 0));//info 3n l variable da no3o eh
 //--------------------------------------strings
+echo "<br>";
+echo "<br>";
+$str=addcslashes("merna adel", "a");
+echo $str;
+echo "<br>";
+$str= addslashes("merna'mera'");//tt7at 2abl ay qoutes tt7at 2abl ay 7aga m7taga esape
+echo $str;
+echo "<br>";
+$str=bin2hex("merna");
+echo $str;
+echo "<br>";
+$str=chop("merna adel","adel");
+echo $str;
+echo "<br>";
+echo chr(109);
+echo "<br>";
+echo chunk_split("merna",1,".");//split each har i string 3la hasab l rakam elii ha7to
+echo "<br>";
+$str = ",2&5L;&\@=V]R;&0A `";
+echo convert_uudecode($str);
+echo "<br>";
+$str = "Hello world!";
+echo convert_uuencode($str);
+echo "<br>";
+//print_r( count_chars("merna"));array b kol l 7rof w yktablii count 7arf7arf
 
-
-
+$str="iam so sad";
+print_r(explode(" ", $str));
+//fprintf bktab gwa l file b3d ma afta7o
+print_r (get_html_translation_table());
+echo "<br>";
+echo hex2bin("4865");
+echo "<br>";
+$arr=array("merna","ael","ragab");
+echo join(" ",$arr);//aw implode
+echo "<br>";
+echo lcfirst("Hello");
+echo "<br>";
+echo ltrim(" merna"," ");
+echo md5("hello");
+echo ord("h");//asi value
+echo "<br>";
+$str = "Hello World";
+echo str_pad($str,20,".");//pad with20 char
+echo "<br";
+echo str_repeat("Wow",13);
+echo str_replace("world","Peter","Hello world!");
+echo "<br";
+echo str_shuffle("Hello World");//random shuffle all char in string
+echo "<br>";
+print_r(str_split("Hello"));
+echo "<br>";
+echo str_word_count("merana aa dd");
+echo "<br>";
+echo strcasecmp("merna", "Merna");//0 equal zy b3d
+echo strcmp("merna", "Merna");//mesh zy b3d
+echo "<br";
+echo stripos("I love php, I love php too!","PHP");//position ofphp
+echo "<br>";
+echo strtolower("Hello");
 ?>
 <!DOCTYPE html>
 <html>
